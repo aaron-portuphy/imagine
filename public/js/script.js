@@ -116,21 +116,22 @@ Math.max(78, 12, 98, 14, 89);
 
 Math.ceil(Math.random() * 1000000);
   
+// String concatenation
+const firstname = 'Aaron ';
+const lastname = 'Portuphy'
+firstname.trim() + ' ' + lastname.trim();
 
+// Template literal
+`${firstname.trim()} ${lastname.trim()}`
 
+// String methods
+firstname.length;
+lastname.length;
+`${firstname.trim()} ${lastname.trim()}`.length
+//length is a property not methods
+firstname.toUpperCase();
+lastname.charAt(0);
+`${firstname.trim().charAt(0)}${lastname.trim().charAt(0)}`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// String conversion
+String(2014);
