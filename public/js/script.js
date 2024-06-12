@@ -135,3 +135,106 @@ lastname.charAt(0);
 
 // String conversion
 String(2014);
+
+
+// Write a function that will add a participant to our Google Classroom
+
+const participants = [];
+function addParticipant(email){
+  //Check if email was provided
+  if(!email){
+    return 'Email not provided';
+  }
+  //Check if email is valid
+  if(!email.includes('@')){
+    return 'Invalid email provided!';
+  }
+  //Add email to the participants;
+particpants.push(email);
+  //Notify them via email
+  //return response
+  return 'Participants added!'
+}
+
+addParticipant();
+
+const alphabets = ['A','B','C','D'];
+alphabets;
+alphabets.join(' ');
+alphabets.join(' ').split(' ');
+
+//Write a funct that will take a user with first name and last name and return full name
+
+const user= {
+  firsname: 'Joe',
+  lastname: 'Ganner'
+}
+function fullname(user){
+  return{
+    ...user,
+    fullname: `${user.firstname} ${user.lastname}`
+  }
+}
+
+//Array map
+const users = [
+  {firstname: 'Linda', lastname: 'Parker'},
+   {firstname: 'Mark', lastname: 'Twaine'},
+   {firstname: 'Oliver', lastname: 'Queen'},
+   {firstname: 'Stephen', lastname: 'Grider'},
+   {firstname: 'Elon', lastname: 'Musk'} 
+]
+users.map(fullname);
+
+//Map and return squares of numbers
+function square(number){
+  return number ** 2;
+}
+
+const numbers = [0,1,2,3,4,5]
+numbers.map(square);
+
+
+
+//Filter and return even numbers
+
+function even(number){
+  return number % 2 == 0
+}
+
+numbers.filter(even);
+
+// Array methods in JavaScript
+
+//Write a function that takes a user with name and dateOfBirth and returns true if their birthday is today else false
+const user = {
+  name: 'Martin King',
+  dateOfBirth: '06/12/1970'
+}
+function isBirthday(user){
+  const today = new Date();
+  const birthDate = new Date(user.dateOfBirth);
+  //console.log(birthDAte.getMonth(), today.getMonth());
+  //console.log(birthDate.getDate(), today.getDate());
+  if (today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate()){
+    return true;
+  } else{
+    return false;
+  }
+}
+
+isBirthday(user);
+
+//Write a function that takes a user with name and dateOfBirth and returns birthday with their name if their birhtday is today else return not your day
+
+function isBirthday(user){
+  const today = new Date();
+  const birthDate = new Date(user.dateOfBirth);
+  if (today.getMonth() === birthDate.getMonth() && today.getDate() === birthDate.getDate()){
+    return 'Happy Birthday';
+  } else{
+    return 'not your day';
+  }
+}
+
+//Objects in JavaScript
